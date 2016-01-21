@@ -1,0 +1,22 @@
+*
+*/
+
+# Whitelist some files
+!.gitignore
+!.bashrc
+!.bash_aliases
+!.Xresources
+
+# i3telist Files and Folders
+#
+
+# .config
+!.config
+!.config/compton.conf
+
+# i3wm
+!.i3
+!.i3/**/*
+.i3/*.swo
+
+
