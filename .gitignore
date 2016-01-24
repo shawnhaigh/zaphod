@@ -6,13 +6,17 @@
 !.bashrc
 !.bash_aliases
 !.Xresources
+!.vimrc
+!.gtkrc-2.0
 
-# i3telist Files and Folders
+# Files and Folders
 #
 
 # .config
 !.config
 !.config/compton.conf
+!.config/gtk-3.0
+!.config/gtk-3.0/settings.ini
 
 # i3wm
 !.i3
