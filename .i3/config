@@ -227,6 +227,6 @@ bar {
 }
 
 # Startup Applications
-exec /home/shawn/bin/get-random-wallpaper.sh 
-exec /usr/bin/compton -b
-exec nm-applet
+exec "/home/shawn/bin/get-random-wallpaper.sh"
+exec "/usr/bin/compton -b"
+exec "nm-applet"
