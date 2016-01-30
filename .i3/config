@@ -88,22 +88,25 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# scratchpad
+bindsym $mod+m move scratchpad
+bindsym $mod+o scratchpad show
+
 # focus the child container
 #bindsym $mod+d focus child
 
 # Application bindings
 #
-assign [class="chromium-browser"] $ws3
-bindsym $mod+Ctrl+i exec --no-startup-id chromium
+# Chrome
+#assign [class="chromium-browser"] $ws3
+bindsym Ctrl+Shift+i exec --no-startup-id chromium
 # Nautilus
 for_window [class="Nautilus"] floating enable
-bindsym $mod+Ctrl+f exec --no-startup-id nautilus --no-desktop
+bindsym Ctrl+Shift+f exec --no-startup-id nautilus --no-desktop
 # Lxappearance
 for_window [class="Lxappearance"] floating enable
 #Skype
-assign [class="Skype"] $ws2
-#for_window [class="Skype"] floating enable move position 0px 25px
-#bindsym Ctrl+Left move position 0px 25px
+#assign [class="Skype"] $ws2
 
 # Screenshots
 bindsym Print exec "scrot ~/Pictures/screenshots/screenshot_%Y-%m-%d%H:%M:%S.png"
@@ -119,16 +122,16 @@ bindsym XF86AudioMute exec --no-startup-id "pactl set-sink-mute 0 toggle && pkil
 # Lock Screen
 bindsym $mod+shift+x exec i3lock
 
-set $ws1 "1:"
-set $ws2 "2:"
-set $ws3 "3:"
-set $ws4 "4:"
-set $ws5 "5:"
-set $ws6 "6:"
-set $ws7 "7:"
-set $ws8 "8:"
-set $ws9 "9:"
-set $ws10 "10:"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -212,7 +215,7 @@ client.urgent           $cBorder-u  $cBackground-u  $cText    $cIndicator
 # finds out, if available)
 bar {
         	
-	status_command i3blocks -c ~/.i3/i3blocks.conf
+	status_command i3blocks -c ~/.i3/blocks/i3blocks.conf
 	tray_output primary
 	position top
     colors {
@@ -227,6 +230,15 @@ bar {
 }
 
 # Startup Applications
-exec "/home/shawn/bin/get-random-wallpaper.sh"
-exec "/usr/bin/compton -b"
-exec "nm-applet"
+#
+exec --no-startup-id ".i3/scripts/get-random-wallpaper.sh"
+exec --no-startup-id "/usr/bin/compton -b"
+exec --no-startup-id "nm-applet"
+
+exec --no-startup-id "i3-msg 'workspace $ws1; append_layout .i3/workspace-1.1.json'"
+exec workspace $ws1; sleep 1 && urxvt -name main
+exec workspace $ws1; sleep 1 && urxvt -name clock -e tty-clock -c
+exec workspace $ws1; sleep 1 && urxvt -name matrix -e cmatrix -a
+exec workspace $ws1; sleep 1 && urxvt -name slurm -e slurm -i eth0
+exec workspace $ws1; sleep 1 && urxvt -name load -e ttyload
+
