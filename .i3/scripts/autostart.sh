@@ -11,7 +11,7 @@ exec --no-startup-id nm-applet
 # Layouts
 #
 i3-msg '
-workspace ;
+workspace 10:;
 append_layout .i3/workspace-1.1.json; 
 exec sleep 1 && urxvt -name main;
 exec sleep 1 && urxvt -name clock -e tty-clock -c;

@@ -1,28 +1,17 @@
-! Update: xrdb -merge .Xresources
-!URxvt.geometry:         100x30
 URxvt.scrollBar:        false
-!URxvt.fading:           40
-!URxvt.fadeColor:        black
-URxvt.transparent:	true
-URxvt.tintColor:        black
-URxvt.shading:          20
-URxvt.inheritPixmap:    true
-!URxvt.pointerColor:     black
-!URxvt.pointerColor2:    white
-!URxvt.blurRadius:       150
+URxvt.fading:           20
+URxvt.transparent:	    true
+URxvt.shading:          10
 URxvt.depth:            32
-!URxvt.buffered:         false
-URxvt.colorUL:		yellow
+URxvt.colorUL:		    yellow
 URxvt.underlineColor: 	yellow
 URxvt.font:             xft:Liberation Mono:autohint=true:antialias=true:size=11
-URxvt.italicFont: 	xft:Liberation Mono:italic:autohint=true:pixelsize=12
+URxvt.italicFont: 	    xft:Liberation Mono:italic:autohint=true:pixelsize=12
 URxvt.boldItalicFont: 	xft:Liberation Mono:bold:italic:autohint=true:pixelsize=12
 
 ! Colors
 URxvt.foreground:  	#03C400
-!URxvt.background: 	[90]#1a1a1a
 URxvt.background: 	#1a1a1a
-URxvt.colorBD:		#04E800
 
 !*cursorColor:   #66ff66
 !black

@@ -9,3 +9,4 @@ alias gst="git status"
 alias svi="sudo vi"
 alias smount="sudo mount"
 alias sumount="sudo umount"
+alias gtwd='cd /home/shawn/webdev'
